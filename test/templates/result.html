@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        .piece {
+            border: 1px solid black;
+            background-color: gray;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>Result</h1>
+    <h2>Divided Rectangle:</h2>
+    <div id="canvas" style="position: relative; width: {{ width }}px; height: {{ height }}px; border: 1px solid black;">
+        {% for piece in pieces %}
+            <div class="piece" style="top: {{ piece.y }}px; left: {{ piece.x }}px; width: {{ piece.width }}px; height: {{ piece.height }}px;"></div>
+        {% endfor %}
+    </div>
+</body>
+</html>
